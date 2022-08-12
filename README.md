@@ -4,7 +4,7 @@ A simple and lightweight library that adds a few convenience methods when using 
 
 ## Installation
 
-Available via Swift Package Manager (SPM) or via [Cocoapods](cocoapods.org)
+Available via Swift Package Manager (SPM) or via [Cocoapods](https://www.cocoapods.org)
 
 ### SPM
 
@@ -26,18 +26,27 @@ pod 'ALHelper'
 
 ## Usage
 
-As this library was only test for setting up a Cocoapods + SPM package it only includes two very simple (but tested!) helpers at the moment.
+As this library was only a test for setting up Cocoapods + SPM packages, it only includes two very simple (but tested!) helpers at the moment.
 
 You can use `addSubviewAndPinToSuperviewEdges(insets:UIEdgeInsets)` to add a view to a parent view, and pin its top, leading, trailing and bottom edges to the parents edges with the optionally supplied insets.
 
-You can use `pinToSuperviewEdges` directly on a child view if it has already been added to a parent to simply add the constraints and optionally supplied insets.
+Alternatively, you can use `pinToSuperviewEdges` directly on a child view if it has already been added to a parent to simply add the constraints and optionally supplied insets.
 
 ### Examples
 
+`addSubviewAndPinToSuperviewEdges`
 ```swift
     let parentView = UIView()
     let childView = UIView()
     let insets = UIEdgeInsets(top: 5)
 
     parentView.addSubviewAndPinToSuperviewEdges(childView, insets: insets)
+```
+
+`pinToSuperviewEdges`
+```swift
+    let parentView = UIView()
+    let childView = UIView()
+    parentView.addSubview(childView)
+    childView.pinToSuperviewEdges()
 ```
