@@ -1,3 +1,5 @@
+![Build](https://github.com/chadgarrett/ALHelper/actions/workflows/swift.yml/badge.svg)
+
 # ALHelper
 
 A simple and lightweight library that adds a few convenience methods when using AutoLayout to construct your views.
